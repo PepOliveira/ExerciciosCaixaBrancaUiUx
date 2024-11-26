@@ -59,6 +59,7 @@ não, isso pode causar um vazamento de dados dos usuários pois temos conexões 
 Código comentado (cada número com  um "*" é um Nó)
 
 
+""
 import java.sql.Connection; 
 
 import java.sql.DriverManager; 
@@ -83,7 +84,7 @@ String url = "jdbc: mysql://127.0.0.1/test?user=lopes&password=123"; conn = Driv
 
    } 
    
-5*   return conn; 
+5*   return conn;
 
     }
     
@@ -121,6 +122,7 @@ nome = rs.getString("nome"); }
 
 13*   return result; } }
 
+""
 
 
 
