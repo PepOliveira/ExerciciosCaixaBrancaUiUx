@@ -2,25 +2,40 @@
 Etapas com Perguntas e Respostas
 
 Etapa 1 – Caixa Branca
+
 Aponte os erros que podem conter no código;
+
 Respostas:
+
 •	a string "com.mysql.Driver.Manager" não está formatada corretamente porque segundo as pesquisas feitas o nome correto do driver MySQL é "com.mysql.cj.jdbc.Driver".
+
 •	a prática recomendada por "segurança" é separar o nome de usuário e a senha usando métodos da API de conexão, não concatenar na URL, pois possivelmente assim poderia “vazar” dados de quem está comandando a API 
+
 •	se a conexão falhar no bloco try na linha ""return conn;"", o método ainda retornará null, o que causará erros durante a rodagem do código.
+
 •	quando concatenamos strings diretamente em códigos SQL isso pode virar uma prática insegura que deixa o código vulnerável a ataques de SQL Injection. Podemos usar o "PreparedStatement" para evitar esse problema, como por exemplo:
+
 String sql = "SELECT nome FROM usuarios WHERE login = ? AND senha = ?";
+
 PreparedStatement pst = conn.prepareStatement(sql);
+
 pst.setString(1, login);
+
 pst.setString(2, senha);
+
 ResultSet rs = pst.executeQuery();
+
 •	quando usamos o ""catch"", poderiamos deixar mais explicito o que a Exception queria "puxar" para o código na linha
+
 •	os recursos como Statement e ResultSet não são fechados, o que pode causar vazamentos de memória. Podemos usar ""try-with-resources"" para garantir que esses recursos sejam fechados automaticamente
 
 Perguntas do Slide:
 
 • Documentação foi descrita o Código?
+
 não, o código não contém comentários que expliquem o código, o que podemos ver de comentário é sobre o inicio das instruções SQL. Mas não é de dificil entendimento saber do que se trata o código
 • As variáveis e constantes possuem boa nomenclatura?
+
 elas possuem um nomenclatura relativamente boa, mas estão abreviadas e isso pode fazer com que alguém menos experiente possa se perder para entender o código. Podemos notar as abreviações em: “conn” para connection e “st” para statement.
 • Existe legibilidade e organização no código?
 sim, mas poderia melhorar, como por exemplo se caso o usuário colocasse alguma credencial errada, o sistema poderia emitir uma mensagem de erro, um “pop-up” por exemplo. Seria uma alternativa mais "segura" de alertar o usuario sobre um erro de credenciais
