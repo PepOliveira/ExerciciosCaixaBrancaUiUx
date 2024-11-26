@@ -58,37 +58,69 @@ não, isso pode causar um vazamento de dados dos usuários pois temos conexões 
 
 Código comentado (cada número com  um "*" é um Nó)
 
+
 import java.sql.Connection; 
+
 import java.sql.DriverManager; 
+
 import java.sql.ResultSet; 
+
 import java.sql.Statement;
+
 1* public class User {
+
 1* public Connection conectarBD() {
+
 2*   Connection conn = null; 
+
 3*   try { 
+
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+
 String url = "jdbc: mysql://127.0.0.1/test?user=lopes&password=123"; conn = DriverManager.getConnection(url); 
+
 4*   } catch (Exception e) {
+
    } 
+   
 5*   return conn; 
+
     }
+    
     public String nome = "";
+    
     public boolean result = false;
+    
 6* public boolean verificarUsuario(String login, String senha) {
+
 7*   String sql = ""; 
+
 8*   Connection conn = conectarBD(); 
+
 //INSTRUÇÃO SQL 
+
 9*    sql += "select nome from usuarios"; 
+
 9*    sql += "where login = '" + login + "'";
+
 9*    sql += "and senha = '" + senha + "'"; 
+
 10*    try { 
+
 Statement st = conn.createStatement(); 
+
 ResultSet rs = st.executeQuery(sql); 
+
 11*    if (rs.next()) { 
+
 result = true; 
+
 nome = rs.getString("nome"); } 
+
 12*   } catch (Exception e) { } 
+
 13*   return result; } }
+
 
 
 
