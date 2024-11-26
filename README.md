@@ -37,15 +37,23 @@ não, o código não contém comentários que expliquem o código, o que podemos
 • As variáveis e constantes possuem boa nomenclatura?
 
 elas possuem um nomenclatura relativamente boa, mas estão abreviadas e isso pode fazer com que alguém menos experiente possa se perder para entender o código. Podemos notar as abreviações em: “conn” para connection e “st” para statement.
+
 • Existe legibilidade e organização no código?
+
 sim, mas poderia melhorar, como por exemplo se caso o usuário colocasse alguma credencial errada, o sistema poderia emitir uma mensagem de erro, um “pop-up” por exemplo. Seria uma alternativa mais "segura" de alertar o usuario sobre um erro de credenciais
+
 • Todos os nullpoints foram tratados?
+
 não, se caso o “conn” fosse “null” em formato booleano, nós poderíamos ver um nullpointer com a falha do banco de dados.
 se caso o “rs.next” onde o “rs” for “null” nós poderiamos presenciar um nullpointer.
+
 • A arquitetura usada foi devidamente respeitada?
+
 o banco de dados poderia ser fechado para mais segurança e evitar possiveis "invasões"
+
 o SQL poderia sofrer ataques com facilidade por ser “ simples”, poderíamos usar “statement” para uma melhor segurança.
 • As conexões foram fechadas?
+
 não, isso pode causar um vazamento de dados dos usuários pois temos conexões em aberto como “ResultSet” ; “Statement” e “Connection”.
 
 Código comentado (cada número com  um "*" é um Nó)
