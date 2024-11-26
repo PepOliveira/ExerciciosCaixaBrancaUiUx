@@ -60,6 +60,7 @@ Código comentado (cada número com  um "*" é um Nó)
 
 
 ""
+
 import java.sql.Connection; 
 
 import java.sql.DriverManager; 
@@ -124,7 +125,7 @@ nome = rs.getString("nome"); }
 
 ""
 
-
+=====================================================================================================================================================================================================
 
 PLANILHA CAIXA BRANCA RESPONDIDA CONFORME AS PERGUNTAS:
 [PLANO DE TESTE-1-1 (1).xlsx](https://github.com/user-attachments/files/17804238/PLANO.DE.TESTE-1-1.1.xlsx)
