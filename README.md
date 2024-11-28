@@ -58,6 +58,7 @@ não, isso pode causar um vazamento de dados dos usuários pois temos conexões 
 
 Código comentado (cada número com  um "*" é um Nó)
 
+etapa 2 e ínicio da etapa 3
 
 ""
 
