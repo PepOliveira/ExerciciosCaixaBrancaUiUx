@@ -1,7 +1,7 @@
 # ExerciciosCaixaBrancaUiUx
 Etapas com Perguntas e Respostas
 
-Etapa 1 – Caixa Branca
+# ETAPA 1 - PERGUNTAS CAIXA BRANCA
 
 Aponte os erros que podem conter no código;
 
@@ -58,7 +58,7 @@ não, isso pode causar um vazamento de dados dos usuários pois temos conexões 
 
 Código comentado (cada número com  um "*" é um Nó)
 
-etapa 2 e ínicio da etapa 3
+# ETAPA 2 E INICIO DA ETAPA 3 - TESTE ESTÁTICO , PLANO DE TESTE , GRAFO DE FLUXO , PONTOS DO CÓDIGO E COMPLEXIDADE CICLOMÁTICA
 
 ""
 
@@ -203,3 +203,6 @@ CAMINHOS INDEPENDENTES
 GRAFO DE FLUXO SEPARADO NO READ.ME:
 
 PLANILHA CAIXA BRANCA RESPONDIDA CONFORME AS PERGUNTAS SEPARADO NO READ.ME:
+
+
+# ETAPA 4 - ARQUIVO FOI COLOCADO NO REPERTÓRIO READ.ME
